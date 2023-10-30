@@ -11,8 +11,8 @@ let shadowOffsetX = 0;
 let shadowOffsetY = 0;
 const timeScale = 0.001;
 
-function animation(callback) {
-    function animate(timestamp) {
+const animation = (callback) => {
+    const animate = (timestamp) => {
         // Șterge conținutul canvas-ului (păstrează dimensiunile)
         callback.clear();
 
@@ -53,19 +53,14 @@ animation({
         //  culoarea umbrei este roșie
         context.shadowColor = 'red';
 
-        // Setează raza umbrei în funcție de variabila "shadowBlur"
         context.shadowBlur = shadowBlur;
 
-        // Setează offset-ul umbrei pe axa X în funcție de variabila "shadowOffsetX"
         context.shadowOffsetX = shadowOffsetX;
 
-        // Setează offset-ul umbrei pe axa Y în funcție de variabila "shadowOffsetY"
         context.shadowOffsetY = shadowOffsetY;
 
-        // Setează culoarea conturului la albastru
         context.strokeStyle = 'blue';
 
-        // Desenează conturul dreptunghiului
         context.stroke();
     }
 });

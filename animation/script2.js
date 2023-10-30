@@ -16,7 +16,7 @@ const triangle = {
 
 // Am facut o functie de tip arrow care am numito 'animation' si care primeste un parametru 'callback'
 const animation = (callback) => {
-    function animate() {
+    const animate = () => {
         callback.clear(); // Funcția `clear` șterge canvas-ul în fiecare cadru.
         callback.update(); // Funcția `update` actualizeaza starea animației.
         callback.render(); // Funcția `render` deseana animația pe canvas.
